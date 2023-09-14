@@ -3,3 +3,17 @@
   width: 100vw;
   height: 100svh;
 }
+
+.Index Button {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 10pt;
+}
+
+.Index Button:hover {
+  border: 3px solid var(--secondary-color);
+}
