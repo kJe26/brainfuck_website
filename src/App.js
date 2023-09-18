@@ -8,6 +8,7 @@ import Index from './pages/Index';
 
 // styles
 import './static/styles/App.css';
+import Colored from './pages/Colored';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route index element={<Index/>} />
+          <Route path="/colored" element={<Colored/>} />
         </Routes>
       </Router>
     </div>

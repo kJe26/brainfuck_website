@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 import '../static/styles/page_styles/Index.css';
 
 const Index = () => {
   const [clicks, setClicks] = useState([]);
-  const [message, setMessage] = useState('');
-  const pattern = [1, 3, 6, 10, 15];
+  const pattern = [1, 3, 6];
+  const navigate = useNavigate();
   
   const handleClick = () => {
     const now = Date.now();
     setClicks((prevClicks) => [...prevClicks, now]);
 
-    if (clicks.length === 14) {
+    if (clicks.length === pattern[pattern.length - 1] - 1) {
       checkPattern([...clicks, now]);
       setClicks([]);
     }
@@ -34,9 +35,9 @@ const Index = () => {
     }
 
     if (validPattern) {
-      setMessage('Pattern matched!');
+      navigate('/colored');
     } else {
-      setMessage('Pattern did not match.');
+      navigate('/');
     }
   };
 
@@ -49,7 +50,6 @@ const Index = () => {
       >
         enter site
       </Button>
-      <p>{message}</p>
     </div>
   );
 };
