@@ -1,14 +1,16 @@
 // custom components
+import Index from './pages/Index';
+import Colored from './pages/Colored';
+
+// react libraries
 import { 
   Route, 
   BrowserRouter as Router, 
   Routes 
 } from 'react-router-dom';
-import Index from './pages/Index';
 
 // styles
 import './static/styles/App.css';
-import Colored from './pages/Colored';
 
 function App() {
   return (

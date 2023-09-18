@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../components/Navbar';
 
 const Colored = () => {
   return (
-    <div>Colored</div>
+    <div className='Colored'>
+      <Navbar />
+    </div>
   );
 };
 
